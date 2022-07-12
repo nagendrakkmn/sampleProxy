@@ -26,7 +26,6 @@ jobs:
         uses: actions/checkout@v1        
       - name: List Files after
         run:  |
-          cd apigee-deploy-maven-plugin-master\samples\mockapi-recommended\src\gateway\Mock-v1
           pwd
           ls -a
       - name: Group of log lines
