@@ -12,6 +12,12 @@ jobs:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
           
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.4
+        with:
+          maven-version: 3.8.2
+        
+          
       - name: List Files
         run:  |
           pwd
