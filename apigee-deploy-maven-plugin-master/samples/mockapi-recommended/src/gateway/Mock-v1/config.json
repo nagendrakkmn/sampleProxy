@@ -1,0 +1,94 @@
+{
+    "configurations": [
+        {
+            "name": "test",
+            "policies": [
+                {
+                    "name": "AM-Set-Headers.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='ENV']",
+                            "value": "test"
+                        }
+                    ]
+                },
+                {
+                    "name": "SC-Get-XML.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ServiceCallout/LocalTargetConnection/Path",
+                            "value": "/v1/mock/xml"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/v1/mock"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://mocktarget.apigee.net"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "prod",
+            "policies": [
+                {
+                    "name": "AM-Set-Headers.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='ENV']",
+                            "value": "prod"
+                        }
+                    ]
+                },
+                {
+                    "name": "SC-Get-XML.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ServiceCallout/LocalTargetConnection/Path",
+                            "value": "/v1/mock/xml"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/v1/mock"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://mocktarget.apigee.net"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

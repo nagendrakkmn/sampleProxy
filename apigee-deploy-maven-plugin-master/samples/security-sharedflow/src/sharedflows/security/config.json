@@ -1,0 +1,54 @@
+{
+    "configurations": [
+        {
+            "name": "test",
+            "policies": [
+                {
+                    "name": "AM-Set-Headers.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='ENV']",
+                            "value": "TEST"
+                        }
+                    ]
+                }
+            ],
+            "sharedflows": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                        	"xpath": "/SharedFlow/Step[Name = 'VerifyAPIKey']/Name",
+                        	"value": "Verify-API-Key"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "prod",
+            "policies": [
+                {
+                    "name": "AM-Set-Headers.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='ENV']",
+                            "value": "PROD"
+                        }
+                    ]
+                }
+            ],
+            "sharedflows": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                        	"xpath": "/SharedFlow/Step[Name = 'VerifyAPIKey']/Name",
+                        	"value": "Verify-API-Key"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

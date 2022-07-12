@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="1" name="Shared-Flow">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <Description>Security SharedFlow</Description>
+    <DisplayName>SF-Security</DisplayName>
+    <Policies>
+        <Policy>Quota</Policy>
+        <Policy>Spike-Arrest</Policy>
+        <Policy>Verify-API-Key</Policy>
+        <Policy>AM-Set-Headers</Policy>
+    </Policies>
+    <Resources/>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <validate>false</validate>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>
