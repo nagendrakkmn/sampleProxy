@@ -22,7 +22,7 @@ jobs:
         run:  |
           pwd
           ls -a     
-          cd ~/apigee-deploy-maven-plugin-master\samples\mockapi-recommended\src\gateway\Mock-v1
+          cd ~ apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1
 
       - name: Checkout
         uses: actions/checkout@v1        
