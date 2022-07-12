@@ -9,7 +9,13 @@ jobs:
       - name: List Files
         run:  |
           pwd
-          ls
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1        
+      - name: List Files after
+        run:  |
+          pwd
+          ls -a
       - name: Group of log lines
         run: |
             echo "Hi Team"
