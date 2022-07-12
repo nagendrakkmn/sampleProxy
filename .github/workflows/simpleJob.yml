@@ -6,6 +6,10 @@ jobs:
   bash-example:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run:  |
+          pwd
+          ls
       - name: Group of log lines
         run: |
             echo "Hi Team"
