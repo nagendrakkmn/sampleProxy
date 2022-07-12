@@ -6,14 +6,20 @@ jobs:
   bash-example:
     runs-on: ubuntu-latest
     steps:
+      - name: install java
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '11'
+          
       - name: List Files
         run:  |
           pwd
           ls -a
       - name check-java-version
         run:  |
-          java -version
-          mvn -version
+          java -version    
+          
         
       - name: Checkout
         uses: actions/checkout@v1        
