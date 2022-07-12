@@ -22,7 +22,7 @@ jobs:
         run:  |
           pwd
           ls -a     
-          mvn -f /apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1/pom.xml apigee-enterprise:deploy -Ptest -Dusername=nagendra_kkmn@yahoo.com -Dpassword=Mysore1234 -Dorg=nagendram
+          mvn -f "./apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1" apigee-enterprise:deploy -Ptest -Dusername=nagendra_kkmn@yahoo.com -Dpassword=Mysore1234 -Dorg=nagendram
 
       - name: Checkout
         uses: actions/checkout@v1        
