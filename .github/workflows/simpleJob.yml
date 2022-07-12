@@ -29,8 +29,7 @@ jobs:
         run:  |
           pwd
           ls -a
-          cd /home/runner/work/sampleProxy/sampleProxy/apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1
-          mvn apigee-enterprise:deploy -Ptest -Dusername=nagendra_kkmn@yahoo.com -Dpassword=Mysore1234 -Dorg=nagendram 
+          mvn -f "./apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1" apigee-enterprise:deploy -Ptest -Dusername=nagendra_kkmn@yahoo.com -Dpassword=Mysore1234 -Dorg=nagendram
       - name: Group of log lines
         run: |
             echo "Hi Team"
