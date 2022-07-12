@@ -15,12 +15,7 @@ jobs:
       - name: List Files
         run:  |
           pwd
-          ls -a
-      - name check-java-version
-        run:  |
-          java -version    
-          
-        
+          ls -a     
       - name: Checkout
         uses: actions/checkout@v1        
       - name: List Files after
