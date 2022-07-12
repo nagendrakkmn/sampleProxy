@@ -11,3 +11,7 @@ jobs:
             echo "Hi Team"
             echo "How are you"
             echo "byee"
+      - name: multiline script
+        run:  |
+          node -v
+          npm -v
