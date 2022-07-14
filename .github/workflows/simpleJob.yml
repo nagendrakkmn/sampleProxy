@@ -29,7 +29,7 @@ jobs:
         run:  |
           pwd
           ls -a
-          mvn -f "./apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1" install -Ptest -Dusername=test@yahoo.com -Dpassword=test -Dorg=nagendram 
+          mvn -f "./apigee-deploy-maven-plugin-master/samples/mockapi-recommended/src/gateway/Mock-v1" install -Ptest -Dusername=nagendra_kkmn@yahoo.com -Dpassword=Mysore1234 -Dorg=nagendram 
       - name: Group of log lines
         run: |
             echo "Hi Team"
